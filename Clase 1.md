@@ -28,9 +28,9 @@ m \ddot{x} + b \dot{x} + k x = F(t)
 $$
 
 Donde:
-- x es el desplazamiento de la masa.
-- \(\dot{x}\) es la velocidad.
-- \(\ddot{x}\) es la aceleración.
+- \( x \) es el desplazamiento de la masa.
+- \( \dot{x} \) es la velocidad.
+- \( \ddot{x} \) es la aceleración.
 
 Esta ecuación diferencial de segundo orden describe la dinámica del sistema y se puede resolver mediante métodos analíticos o numéricos para obtener la respuesta temporal.
 
@@ -62,9 +62,9 @@ J \ddot{\theta} + B \dot{\theta} + K \theta = T(t)
 $$
 
 Donde:
-- \(\theta\) es el desplazamiento angular.
-- \(\dot{\theta}\) es la velocidad angular.
-- \(\ddot{\theta}\) es la aceleración angular.
+- \( \theta \) es el desplazamiento angular.
+- \( \dot{\theta} \) es la velocidad angular.
+- \( \ddot{\theta} \) es la aceleración angular.
 
 Esta ecuación es fundamental para analizar la dinámica de sistemas de control rotacionales y diseñar mecanismos de regulación.
 
@@ -96,9 +96,9 @@ L \frac{d^2 i}{dt^2} + R \frac{d i}{dt} + \frac{1}{C} i = \frac{d V}{dt}
 $$
 
 Donde:
-- i es la corriente en el circuito.
-- \(\frac{d i}{dt}\) es la tasa de cambio de la corriente.
-- \(\frac{d^2 i}{dt^2}\) es la derivada segunda de la corriente con respecto al tiempo.
+- \( i \) es la corriente en el circuito.
+- \( \frac{d i}{dt} \) es la tasa de cambio de la corriente.
+- \( \frac{d^2 i}{dt^2} \) es la derivada segunda de la corriente con respecto al tiempo.
 
 Este circuito puede analizarse en el dominio del tiempo o utilizando la Transformada de Laplace para obtener su respuesta en el dominio de la frecuencia.
 
