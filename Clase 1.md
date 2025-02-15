@@ -17,23 +17,20 @@ Un sistema masa-resorte-amortiguador es un modelo fundamental en el estudio de s
 
 Aplicando la Segunda Ley de Newton, la sumatoria de fuerzas en la dirección del movimiento es:
 
-$$
+\[
 F(t) - b \dot{x} - kx = m \ddot{x}
-$$
+\]
 
 Reordenando:
 
-$$
-m \ddot{x} + b \dot{x} + k x = F(t)
-$$
+\[
+ m \ddot{x} + b \dot{x} + k x = F(t)
+\]
 
 Donde:
-
-\( x \) es el desplazamiento de la masa.
-
-\( \dot{x} \) es la velocidad.
-
-\( \ddot{x} \) es la aceleración.
+- \( x \) es el desplazamiento de la masa.
+- \( \dot{x} = \frac{dx}{dt} \) es la velocidad.
+- \( \ddot{x} = \frac{d^2x}{dt^2} \) es la aceleración.
 
 Esta ecuación diferencial de segundo orden describe la dinámica del sistema y se puede resolver mediante métodos analíticos o numéricos para obtener la respuesta temporal.
 
@@ -54,23 +51,20 @@ Los sistemas rotacionales son equivalentes a los sistemas traslacionales, pero e
 
 Aplicando la ecuación de movimiento rotacional basada en la Segunda Ley de Newton para sistemas angulares:
 
-$$
+\[
 T(t) - B \dot{\theta} - K \theta = J \ddot{\theta}
-$$
+\]
 
 Reordenando:
 
-$$
+\[
 J \ddot{\theta} + B \dot{\theta} + K \theta = T(t)
-$$
+\]
 
 Donde:
-
-\( \theta \) es el desplazamiento angular.
-
-\( \dot{\theta} \) es la velocidad angular.
-
-\( \ddot{\theta} \) es la aceleración angular.
+- \( \theta \) es el desplazamiento angular.
+- \( \dot{\theta} = \frac{d\theta}{dt} \) es la velocidad angular.
+- \( \ddot{\theta} = \frac{d^2\theta}{dt^2} \) es la aceleración angular.
 
 Esta ecuación es fundamental para analizar la dinámica de sistemas de control rotacionales y diseñar mecanismos de regulación.
 
@@ -91,23 +85,20 @@ Un circuito RLC es un sistema eléctrico que puede modelarse mediante una ecuaci
 
 Aplicando la Ley de Kirchhoff de voltajes, la suma de caídas de voltaje en los componentes es igual a la tensión aplicada:
 
-$$
+\[
 V(t) = L \frac{d^2 i}{dt^2} + R \frac{d i}{dt} + \frac{1}{C} i
-$$
+\]
 
 Reordenando:
 
-$$
+\[
 L \frac{d^2 i}{dt^2} + R \frac{d i}{dt} + \frac{1}{C} i = \frac{d V}{dt}
-$$
+\]
 
 Donde:
-
-\( i \) es la corriente en el circuito.
-
-\( \frac{d i}{dt} \) es la tasa de cambio de la corriente.
-
-\( \frac{d^2 i}{dt^2} \) es la derivada segunda de la corriente con respecto al tiempo.
+- \( i \) es la corriente en el circuito.
+- \( \frac{d i}{dt} \) es la tasa de cambio de la corriente.
+- \( \frac{d^2 i}{dt^2} \) es la derivada segunda de la corriente con respecto al tiempo.
 
 Este circuito puede analizarse en el dominio del tiempo o utilizando la Transformada de Laplace para obtener su respuesta en el dominio de la frecuencia.
 
