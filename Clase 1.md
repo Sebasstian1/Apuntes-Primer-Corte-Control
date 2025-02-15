@@ -17,15 +17,15 @@ Un sistema masa-resorte-amortiguador es un modelo fundamental en el estudio de s
 
 Aplicando la Segunda Ley de Newton, la sumatoria de fuerzas en la dirección del movimiento es:
 
-\[
+$$
 F(t) - b \dot{x} - kx = m \ddot{x}
-\]
+$$
 
 Reordenando:
 
-\[
+$$
  m \ddot{x} + b \dot{x} + k x = F(t)
-\]
+$$
 
 Donde:
 - \( x \) es el desplazamiento de la masa.
@@ -51,15 +51,15 @@ Los sistemas rotacionales son equivalentes a los sistemas traslacionales, pero e
 
 Aplicando la ecuación de movimiento rotacional basada en la Segunda Ley de Newton para sistemas angulares:
 
-\[
+$$
 T(t) - B \dot{\theta} - K \theta = J \ddot{\theta}
-\]
+$$
 
 Reordenando:
 
-\[
+$$
 J \ddot{\theta} + B \dot{\theta} + K \theta = T(t)
-\]
+$$
 
 Donde:
 - \( \theta \) es el desplazamiento angular.
@@ -85,15 +85,15 @@ Un circuito RLC es un sistema eléctrico que puede modelarse mediante una ecuaci
 
 Aplicando la Ley de Kirchhoff de voltajes, la suma de caídas de voltaje en los componentes es igual a la tensión aplicada:
 
-\[
+$$
 V(t) = L \frac{d^2 i}{dt^2} + R \frac{d i}{dt} + \frac{1}{C} i
-\]
+$$
 
 Reordenando:
 
-\[
+$$
 L \frac{d^2 i}{dt^2} + R \frac{d i}{dt} + \frac{1}{C} i = \frac{d V}{dt}
-\]
+$$
 
 Donde:
 - \( i \) es la corriente en el circuito.
