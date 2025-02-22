@@ -37,6 +37,8 @@ Esta ecuación diferencial de segundo orden describe la dinámica del sistema y 
 ### **Ejemplo de Aplicación**
 
 #### **Sistema con Dos Masas Acopladas**
+![{A0E9A13C-C685-4FD1-A217-E5AD558BA112}](https://github.com/user-attachments/assets/bc30efe2-d132-4ee8-88d3-89f8e9a0ac95)
+
 
 Un sistema con dos masas acopladas mediante resortes y amortiguadores, como se muestra en la imagen adjunta, se describe mediante las siguientes ecuaciones:
 
