@@ -170,3 +170,12 @@ Este valor es un ejemplo práctico de cómo la constante de tiempo y la ganancia
 Los sistemas de primer orden son fundamentales en muchas aplicaciones de ingeniería y control. A través de este análisis, hemos aprendido cómo caracterizar estos sistemas mediante su ecuación diferencial, su forma canónica, y cómo predecir su comportamiento ante entradas comunes como escalón, rampa e impulso. Además, el análisis de los polos y su ubicación es esencial para comprender cómo el sistema responderá en términos de velocidad y estabilidad.
 
 El estudio de estos sistemas proporciona las bases para comprender sistemas más complejos, como los sistemas de segundo orden y los sistemas multivariables. Las herramientas desarrolladas en este contexto son ampliamente aplicadas en el diseño de sistemas de control automático, control de procesos industriales, y diseño de sistemas electrónicos, entre otros.
+
+---
+
+## Referencias
+
+- Ogata, K. "Ingeniería de Control Moderna".
+- Dorf, R. "Sistemas de Control Automático".
+
+
