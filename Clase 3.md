@@ -112,7 +112,7 @@ $$
 H(s) = \frac{s^2 + 1}{s^2 + 3s + 2}
 $$
 
-Aquí, el grado del numerador (1) es menor que el grado del denominador (2), por lo que es una función propia.
+Aquí, el grado del numerador (1) es igual que el grado del denominador (1), por lo que es una función propia.
 
 ### Función Impropia
 El grado del numerador es mayor que el grado del denominador. Los sistemas con funciones impropias tienden a ser inestables o no realizables físicamente.
