@@ -27,7 +27,9 @@ $$
 
 Donde:
 - \( x \) es el desplazamiento de la masa.
-- \( \dot{x} \) es la velocidad.
+- $$
+m x'' + b \dot{x} + kx = F(t)
+$$
 - \( x'' \) es la aceleración.
 
 **Solución de la Ecuación:**  
