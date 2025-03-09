@@ -103,40 +103,36 @@ Aquí:
 
 ### **Definición**
 
-Las funciones de transferencia se pueden clasificar en tres tipos según la relación entre los grados del numerador y el denominador:
+Las funciones de transferencia se pueden clasificar según la relación entre los grados del numerador y el denominador de la siguiente manera:
 
-### Función Propia
-El grado del numerador es menor o igual al grado del denominador. Los sistemas con funciones propias son generalmente estables y no tienden a generar oscilaciones no deseadas.
+- **Función Propia**: El grado del numerador es **menor o igual** que el grado del denominador.
+  - **Función Estrictamente Propia**: El grado del numerador es **estrictamente menor** que el del denominador.
+  - **Función Propia**: El grado del numerador es **igual** al del denominador.
 
-**Ejemplo de función propia:**
+  **Ejemplo de función propia** (grado del numerador igual al del denominador):
+  $$
+  H(s) = \frac{s + 1}{s^2 + 3s + 2}
+  $$
 
-$$
-H(s) = \frac{s + 1}{s^2 + 3s + 2}
-$$
+  **Ejemplo de función estrictamente propia** (grado del numerador menor que el del denominador):
+  $$
+  H(s) = \frac{1}{s^2 + 2s + 1}
+  $$
 
-Aquí, el grado del numerador (1) es menor que el grado del denominador (2), por lo que es una función propia.
+- **Función Impropia**: El grado del numerador es **mayor** que el grado del denominador.
 
-### Función Impropia
-El grado del numerador es mayor que el grado del denominador. Los sistemas con funciones impropias tienden a ser inestables o no realizables físicamente.
+  **Ejemplo de función impropia**:
+  $$
+  H(s) = \frac{s^2 + 2s + 1}{s + 3}
+  $$
 
-**Ejemplo de función impropia:**
+---
 
-$$
-H(s) = \frac{s^2 + 2s + 1}{s + 3}
-$$
+### **Resumen**
 
-En este caso, el grado del numerador (2) es mayor que el grado del denominador (1), lo que clasifica la función como impropia.
-
-### Función Estrictamente Propia
-El grado del numerador es estrictamente menor que el grado del denominador. Este tipo de función asegura que el sistema tiene una respuesta estable y controlable, siendo común en sistemas físicos reales.
-
-**Ejemplo de función estrictamente propia:**
-
-$$
-H(s) = \frac{1}{s^2 + 2s + 1}
-$$
-
-En este caso, el grado del numerador (0) es estrictamente menor que el grado del denominador (2), lo que clasifica la función como estrictamente propia.
+- **Función propia**: El grado del numerador es menor o igual que el del denominador.
+- **Función estrictamente propia**: El grado del numerador es estrictamente menor que el del denominador.
+- **Función impropia**: El grado del numerador es mayor que el del denominador.
 
 
 ---
