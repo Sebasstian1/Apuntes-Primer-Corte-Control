@@ -22,7 +22,7 @@ $$
 Reordenando:
 
 $$
-mx'' + b\dot{x} + kx = F(t)
+m x'' + b \dot{x} + kx = F(t)
 $$
 
 Donde:
@@ -32,7 +32,7 @@ Donde:
 
 **Solución de la Ecuación:**  
 La solución general depende de las condiciones iniciales y del tipo de excitación aplicada al sistema. Se pueden analizar tres casos:
-- **Respuesta libre sin amortiguamiento** (\( b = 0 \)): Movimiento oscilatorio con frecuencia natural \( \omega_n = \frac{k}{m} \).
+- **Respuesta libre sin amortiguamiento** (\( b = 0 \)): Movimiento oscilatorio con frecuencia natural \( \omega_n = \sqrt{\frac{k}{m}} \).
 - **Respuesta libre con amortiguamiento** (\( b > 0 \)): Movimiento amortiguado con diferentes regímenes (subamortiguado, críticamente amortiguado, sobreamortiguado).
 - **Respuesta forzada** (\( F(t) \neq 0 \)): Respuesta en régimen permanente dependiendo de la excitación externa.
 
@@ -60,7 +60,7 @@ $$
 Reordenando:
 
 $$
-J\theta'' + B\dot{\theta} + K\theta = T(t)
+J \theta'' + B \dot{\theta} + K \theta = T(t)
 $$
 
 Donde:
