@@ -1,167 +1,158 @@
-# Modelado de Sistemas y Análisis de Control
+# Análisis de Sistemas Dinámicos y Control
 
-Este documento profundiza en los conceptos fundamentales para el análisis de sistemas de control, cubriendo desde la formulación de ecuaciones diferenciales hasta el análisis de polos y ceros en el dominio de Laplace. A continuación, se detallan cada uno de los temas esenciales, con ejemplos y explicaciones.
+Este documento aborda los conceptos fundamentales sobre ecuaciones diferenciales, transformadas de Laplace, funciones de transferencia, clasificación de funciones según su grado, y el análisis de polos y ceros en sistemas dinámicos.
 
 ---
 
 ## 1. Ecuación Diferencial de un Modelo
 
-### **Descripción del Modelo**
+Las ecuaciones diferenciales son fundamentales para describir el comportamiento de sistemas dinámicos. A continuación, se presenta un ejemplo clásico con un sistema de masa-resorte-amortiguador, modelado por una ecuación diferencial de segundo orden.
 
-Las ecuaciones diferenciales se utilizan para modelar sistemas dinámicos, donde el comportamiento de un sistema se describe mediante una relación matemática entre las variables de entrada y salida. 
+### **Modelo de Sistema Masa-Resorte-Amortiguador**
 
-Consideremos un sistema mecánico de masa-resorte-amortiguador, un modelo clásico en física y control. La dinámica de este sistema se describe mediante la segunda ley de Newton.
-
-### **Ecuación Diferencial**
-
-La ecuación que gobierna el movimiento de la masa en este sistema es:
+La ecuación diferencial que describe este sistema es la siguiente:
 
 $$
-m \cdot \frac{d^2 x(t)}{dt^2} + b \cdot \frac{dx(t)}{dt} + k \cdot x(t) = F(t)
+m \frac{d^2x(t)}{dt^2} + b \frac{dx(t)}{dt} + k x(t) = F(t)
 $$
 
 Donde:
-- \(m\) es la masa del objeto, representando la inercia del sistema.
-- \(b\) es el coeficiente de amortiguamiento, que describe la resistencia al movimiento debido a fricción u otras fuerzas disipativas.
-- \(k\) es la constante del resorte, que describe la elasticidad del resorte.
-- \(x(t)\) es el desplazamiento de la masa en el tiempo.
-- \(\frac{dx(t)}{dt}\) es la velocidad (derivada de \(x(t)\)), y \(\frac{d^2 x(t)}{dt^2}\) es la aceleración (segunda derivada de \(x(t)\)).
-- \(F(t)\) es la fuerza externa aplicada al sistema.
+- \( m \) es la masa del objeto.
+- \( b \) es el coeficiente de amortiguamiento.
+- \( k \) es la constante del resorte.
+- \( x(t) \) es el desplazamiento de la masa en el tiempo.
+- \( \frac{dx(t)}{dt} \) es la velocidad.
+- \( \frac{d^2x(t)}{dt^2} \) es la aceleración.
+- \( F(t) \) es la fuerza externa aplicada.
 
-Esta ecuación describe cómo la masa se mueve en función de las fuerzas aplicadas, la resistencia al movimiento y la elasticidad del resorte.
+Esta ecuación diferencial describe cómo la masa responde a la fuerza aplicada, teniendo en cuenta las fuerzas de amortiguamiento y elasticidad.
 
 ---
 
 ## 2. Transformada Inversa de Laplace
 
-### **Transformada de Laplace**
+### **Definición de Transformada de Laplace**
 
-La transformada de Laplace se usa para convertir funciones del dominio del tiempo (señales temporales) en funciones del dominio de Laplace, que es más conveniente para el análisis de sistemas lineales.
+La transformada de Laplace es una técnica matemática utilizada para convertir funciones del tiempo en funciones del dominio de Laplace, lo cual facilita su análisis en sistemas lineales.
 
-La transformada de Laplace de una función \(f(t)\), denotada como \(F(s)\), se define como:
+La transformada de Laplace de una función \( f(t) \) es:
 
 $$
-F(s) = \int_{0}^{\infty} f(t) \cdot e^{-st} \, dt
+F(s) = \mathcal{L}\{f(t)\} = \int_0^\infty f(t) e^{-st} dt
 $$
 
-Donde:
-- \(s\) es una variable compleja, \(s = \sigma + j\omega\), que se utiliza en el dominio de Laplace.
-- \(e^{-st}\) es el factor de decaimiento exponencial.
+Donde \( s \) es una variable compleja \( s = \sigma + j\omega \).
 
 ### **Transformada Inversa de Laplace**
 
-La transformada inversa de Laplace permite regresar del dominio de Laplace al dominio del tiempo. Un ejemplo práctico es el siguiente:
-
-Si tenemos la función en el dominio de Laplace:
+La transformada inversa de Laplace nos permite regresar del dominio de Laplace al dominio del tiempo. Por ejemplo, para la siguiente función en el dominio de Laplace:
 
 $$
 F(s) = \frac{1}{s^2 + 2s + 5}
 $$
 
-La transformada inversa de esta función nos da la solución en el dominio del tiempo:
+La transformada inversa de Laplace es:
 
 $$
-f(t) = e^{-t} \cdot \sin(t)
+f(t) = e^{-t} \sin(t)
 $$
 
-Este resultado se puede obtener mediante tablas de transformadas inversas de Laplace o usando fracciones parciales, y muestra cómo un sistema oscilatorio decae con el tiempo.
+Este resultado es obtenido a partir de tablas de transformadas inversas o fracciones parciales.
 
 ---
 
 ## 3. Función de Transferencia
 
-### **Definición**
+### **Definición de Función de Transferencia**
 
-La función de transferencia de un sistema dinámico es una representación algebraica que relaciona la entrada y la salida del sistema en el dominio de Laplace, bajo la suposición de que las condiciones iniciales son nulas. Es útil para estudiar la respuesta del sistema sin necesidad de resolver las ecuaciones diferenciales directamente.
+La función de transferencia describe la relación entre la entrada y la salida de un sistema en el dominio de Laplace, bajo la suposición de que las condiciones iniciales son cero.
 
-La función de transferencia \(H(s)\) se define como la relación entre la transformada de Laplace de la salida y la entrada:
+La función de transferencia \( H(s) \) se define como:
 
 $$
 H(s) = \frac{Y(s)}{U(s)}
 $$
 
 Donde:
-- \(Y(s)\) es la transformada de Laplace de la salida \(y(t)\).
-- \(U(s)\) es la transformada de Laplace de la entrada \(u(t)\).
+- \( Y(s) \) es la transformada de Laplace de la salida \( y(t) \).
+- \( U(s) \) es la transformada de Laplace de la entrada \( u(t) \).
 
-### **Ejemplo: Sistema Masa-Resorte-Amortiguador**
+### **Ejemplo de Sistema Masa-Resorte-Amortiguador**
 
-Para el sistema masa-resorte-amortiguador, la función de transferencia \(H(s)\) es:
+La función de transferencia de un sistema masa-resorte-amortiguador es:
 
 $$
 H(s) = \frac{1}{ms^2 + bs + k}
 $$
 
-Aquí, \(X(s)\) es la transformada de Laplace de la salida, que es el desplazamiento de la masa, y \(F(s)\) es la transformada de Laplace de la entrada, que es la fuerza aplicada. Esta función describe cómo la entrada afecta a la salida en el dominio de Laplace.
+Esta función describe cómo la entrada (fuerza aplicada) afecta a la salida (desplazamiento de la masa) en el dominio de Laplace.
 
 ---
 
 ## 4. Funciones Propias, Impropias y Estrictamente Propias
 
-### **Definición**
+### **Definición de Funciones Propias, Impropias y Estrictamente Propias**
 
-Las funciones de transferencia pueden clasificarse en tres tipos según la relación entre los grados del numerador y el denominador:
+Las funciones de transferencia se clasifican según la relación entre los grados del numerador y del denominador.
 
-- **Función Propia:** El grado del numerador es menor o igual que el grado del denominador. Esto significa que el sistema es "estable" y su salida no crece más rápido que la entrada.
+- **Función Propia:** El grado del numerador es menor o igual al grado del denominador.
 
   Ejemplo de **función propia**:
 
-  $$
+  $$ 
   H(s) = \frac{s + 1}{s^2 + 3s + 2}
   $$
 
-  En este caso, el grado del numerador (1) es menor que el grado del denominador (2), por lo que es una función **propia**.
+  Aquí, el grado del numerador (1) es menor que el grado del denominador (2).
 
-- **Función Impropia:** El grado del numerador es mayor que el grado del denominador. Esto indica que el sistema tiene un comportamiento "inestable", y la salida puede crecer más rápido que la entrada.
+- **Función Impropia:** El grado del numerador es mayor que el grado del denominador.
 
   Ejemplo de **función impropia**:
 
-  $$
+  $$ 
   H(s) = \frac{s^2 + 2s + 1}{s + 3}
   $$
 
-  El grado del numerador (2) es mayor que el grado del denominador (1), por lo que es una función **impropia**.
+  El grado del numerador (2) es mayor que el grado del denominador (1).
 
-- **Función Estrictamente Propia:** El grado del numerador es estrictamente menor que el grado del denominador. Este tipo de función es "más estable" y es común en sistemas físicos reales.
+- **Función Estrictamente Propia:** El grado del numerador es estrictamente menor que el grado del denominador.
 
   Ejemplo de **función estrictamente propia**:
 
-  $$
+  $$ 
   H(s) = \frac{1}{s^2 + 2s + 1}
   $$
 
-  Aquí, el grado del numerador (0) es estrictamente menor que el grado del denominador (2), por lo que es estrictamente **propia**.
+  El grado del numerador (0) es estrictamente menor que el grado del denominador (2).
 
 ---
 
-## 5. Polos y Cerros
+## 5. Polos y Ceros
 
 ### **Definición de Polos y Ceros**
 
-- **Polos:** Son los valores de \(s\) que hacen que el denominador de la función de transferencia sea cero. Los polos indican los puntos donde la salida del sistema puede volverse infinita. Son esenciales para analizar la estabilidad de un sistema.
-  
-- **Ceros:** Son los valores de \(s\) que hacen que el numerador de la función de transferencia sea cero. Los ceros indican los puntos donde la salida es nula, incluso si la entrada no lo es.
+Los **polos** son los valores de \( s \) que hacen que el denominador de la función de transferencia sea igual a cero. Los **ceros** son los valores de \( s \) que hacen que el numerador sea igual a cero.
 
-### **Ejemplo: Sistema Masa-Resorte-Amortiguador**
+### **Ejemplo de Análisis de Polos y Ceros**
 
-Para la función de transferencia:
+Consideremos la función de transferencia:
 
 $$
 H(s) = \frac{s + 2}{s^2 + 3s + 2}
 $$
 
-- **Polos:** Son los valores de \(s\) que satisfacen la ecuación del denominador \(s^2 + 3s + 2 = 0\). Resolviendo la ecuación cuadrática, encontramos los polos en \(s = -1\) y \(s = -2\).
-- **Ceros:** Son los valores de \(s\) que satisfacen la ecuación del numerador \(s + 2 = 0\), dando como solución \(s = -2\).
+- **Polos:** Son los valores de \( s \) que hacen que el denominador sea igual a cero. Resolviendo \( s^2 + 3s + 2 = 0 \), encontramos los polos en \( s = -1 \) y \( s = -2 \).
+- **Ceros:** Son los valores de \( s \) que hacen que el numerador sea igual a cero. Resolviendo \( s + 2 = 0 \), encontramos un cero en \( s = -2 \).
 
 ### **Importancia de Polos y Ceros**
 
-El análisis de polos y ceros es fundamental para determinar las propiedades dinámicas de un sistema, como su estabilidad, resonancia y respuesta a distintas frecuencias.
+El análisis de polos y ceros es esencial para entender las propiedades dinámicas de un sistema. Los polos determinan la estabilidad del sistema, mientras que los ceros afectan su respuesta en frecuencia.
 
 ---
 
 ## Conclusión
 
-El modelado de sistemas utilizando ecuaciones diferenciales y la posterior transformación al dominio de Laplace es esencial para analizar y diseñar sistemas dinámicos. La función de transferencia es una herramienta poderosa para estudiar cómo un sistema responde a diversas entradas. Además, el análisis de las funciones como propias, impropias o estrictamente propias, junto con el estudio de los polos y ceros, proporciona información clave sobre la estabilidad y el comportamiento dinámico del sistema.
+El modelado y análisis de sistemas dinámicos mediante ecuaciones diferenciales y la transformada de Laplace es fundamental para el diseño de sistemas de control. Las funciones de transferencia, el análisis de funciones propias, impropias y estrictamente propias, y el estudio de polos y ceros proporcionan una comprensión profunda del comportamiento de los sistemas y son herramientas esenciales en la ingeniería de control.
 
 ---
 
