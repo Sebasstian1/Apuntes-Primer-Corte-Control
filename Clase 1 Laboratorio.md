@@ -1,107 +1,50 @@
-  # Clase 2: Circuitos RLC en el Laboratorio
-  
-  En esta clase en el laboratorio, continuamos explorando las funciones de transferencia, pero nos enfocamos en un análisis más detallado de los **circuitos RLC** y su relación con los conceptos de funciones propias, bipropias e impropias. Los circuitos RLC son circuitos eléctricos que contienen resistores (R), inductores (L) y capacitores (C), y son esenciales en el estudio de sistemas dinámicos.
-  
-  ### Circuitos RLC
-  Un circuito RLC puede presentarse en varias configuraciones: **serie** o **paralelo**. Los circuitos RLC se usan comúnmente para modelar comportamientos resonantes, como oscilaciones y filtrado de señales. A continuación, veremos cómo los elementos del circuito afectan la función de transferencia.
-  
-  ---
-  
-  ## Circuito RLC Serie
-  
-  En un circuito RLC en serie, la resistencia (R), el inductor (L) y el capacitor (C) están conectados de forma secuencial. La función de transferencia del circuito RLC en serie se puede obtener analizando la impedancia total del sistema.
-  
-  ### Impedancia en un circuito RLC Serie
-  
-  La impedancia total de un circuito RLC serie se calcula como:
-  
-  $$
-  Z(s) = R + sL + \frac{1}{sC}
-  $$
-  
-  Donde:
-  - \(R\) es la resistencia.
-  - \(L\) es la inductancia.
-  - \(C\) es la capacitancia.
-  - \(s\) es la variable compleja de Laplace.
-  
-  ### Función de Transferencia
-  
-  La función de transferencia \(H(s)\) de un circuito RLC serie es la relación entre la salida y la entrada del sistema en el dominio de Laplace:
-  
-  $$
-  H(s) = \frac{V_{out}(s)}{V_{in}(s)} = \frac{1}{R + sL + \frac{1}{sC}}
-  $$
-  
-  Donde:
-  - \(V_{out}(s)\) es la salida en el dominio de Laplace.
-  - \(V_{in}(s)\) es la entrada en el dominio de Laplace.
-  
-  Esta función de transferencia describe cómo las señales de entrada se afectan al pasar por el circuito.
-  
-  ---
-  
-  ## Circuito RLC Paralelo
-  
-  En un circuito RLC paralelo, la resistencia (R), el inductor (L) y el capacitor (C) están conectados en paralelo. La impedancia total de un circuito RLC paralelo se calcula de manera diferente.
-  
-  ### Impedancia en un circuito RLC Paralelo
-  
-  La impedancia total de un circuito RLC paralelo es:
-  
-  $$
-  Z(s) = \left( \frac{1}{R} + \frac{1}{sL} + sC \right)^{-1}
-  $$
-  
-  ### Función de Transferencia
-  
-  La función de transferencia en el caso de un circuito RLC paralelo se obtiene de la siguiente manera:
-  
-  $$
-  H(s) = \frac{V_{out}(s)}{V_{in}(s)} = \frac{1}{\left( \frac{1}{R} + \frac{1}{sL} + sC \right)}
-  $$
-  
-  ---
-  
-  ### Análisis de Estabilidad y Frecuencia de Resonancia
-  
-  En ambos tipos de circuitos, el comportamiento de la función de transferencia depende de la frecuencia de operación. Cuando la frecuencia se acerca a la **frecuencia de resonancia**, que se define como:
-  
-  $$
-  f_0 = \frac{1}{2\pi \sqrt{LC}}
-  $$
-  
-  El circuito muestra un comportamiento resonante, lo que significa que puede amplificar o filtrar señales dependiendo de su configuración.
-  
-  ---
-  
-  ## Resumen de Funciones de Transferencia en Circuitos RLC
-  
-  - **Circuito RLC Serie**: La función de transferencia está dada por:
-  
-    $$
-    H(s) = \frac{1}{R + sL + \frac{1}{sC}}
-    $$
-  
-  - **Circuito RLC Paralelo**: La función de transferencia está dada por:
-  
-    $$
-    H(s) = \frac{1}{\left( \frac{1}{R} + \frac{1}{sL} + sC \right)}
-    $$
-  
-  ### Tipos de Funciones
-  
-  Las funciones de transferencia para los circuitos RLC pueden clasificarse de manera similar a otros sistemas:
-  
-  - **Función propia**: Cuando el grado del numerador es menor que el del denominador.
-  - **Función bipropia**: Cuando el grado del numerador es igual al del denominador.
-  - **Función impropia**: Cuando el grado del numerador es mayor que el del denominador.
-  - **Función estrictamente propia**: Cuando el grado del numerador es estrictamente menor que el del denominador.
-  
-  Los circuitos RLC pueden tener funciones propias, bipropias o impropias dependiendo de la relación entre la inductancia, la capacitancia y la resistencia del circuito.
-  
-  ---
-  
-  ### **Conclusiones**
-  En esta clase, hemos profundizado en los circuitos RLC, observando cómo la impedancia y las funciones de transferencia determinan el comportamiento de estos sistemas. Además, hemos identificado cómo clasificar estas funciones según su comportamiento, y cómo la resonancia influye en la respuesta de los circuitos. Los circuitos RLC son fundamentales para comprender sistemas oscilatorios, y su análisis en términos de funciones de transferencia es clave para el diseño de filtros y otros sistemas electrónicos.
-  
+# Clase de Laboratorio: Sistemas de Control
+
+En esta clase de laboratorio se abordaron los mismos temas tratados en la **Clase 1**, específicamente el estudio de **Sistemas Masa-Resorte-Amortiguador**, **Sistemas Rotacionales**, y **Circuitos RLC**. Sin embargo, se dedicó más tiempo a profundizar en el estudio de los circuitos RLC, ya que estos presentan una amplia variedad de aplicaciones en el mundo real y su análisis es crucial en muchos sistemas de control.
+
+---
+
+## 1. Sistemas Masa-Resorte-Amortiguador
+
+En el laboratorio se revisaron brevemente los conceptos presentados en la **Clase 1** acerca del sistema masa-resorte-amortiguador. Se realizaron demostraciones físicas usando modelos de masa y resorte, así como ejemplos donde se observó la amortiguación de sistemas reales. 
+
+---
+
+## 2. Sistemas Rotacionales
+
+Similar a la **Clase 1**, en el laboratorio se discutieron los sistemas rotacionales, destacando su importancia en aplicaciones como los motores eléctricos y sistemas de control de velocidad en robótica. Se utilizaron simulaciones para modelar el comportamiento de estos sistemas bajo diferentes condiciones de amortiguamiento y torque aplicado.
+
+---
+
+## 3. Circuitos RLC: Profundización
+
+En esta clase de laboratorio, se dedicó un enfoque más extenso a los **Circuitos RLC**, debido a su relevancia en el diseño de filtros eléctricos y osciladores. Se profundizó en los siguientes aspectos:
+
+### **Comportamiento Oscilatorio y Transitorio**
+
+Los circuitos RLC pueden mostrar diferentes tipos de comportamientos en función de los valores de sus componentes (resistor, inductor y capacitor). Se mostró cómo los **circuitos subamortiguados** producen oscilaciones, mientras que los **sobreamortiguados** resultan en respuestas más lentas y suaves. Se discutieron las implicaciones de cada tipo de amortiguamiento en el diseño de sistemas de comunicación y filtros de señal.
+
+### **Respuesta en el Dominio de la Frecuencia**
+
+Además de las respuestas transitorias, se exploró cómo los circuitos RLC pueden analizarse en el **dominio de la frecuencia**. Los filtros diseñados con componentes RLC son capaces de filtrar señales según su frecuencia, lo cual es esencial en comunicaciones, análisis de señales y otros sistemas de procesamiento de señales.
+
+### **Simulaciones y Experimentos**
+
+En el laboratorio, los estudiantes realizaron experimentos prácticos con **circuitos RLC** reales, midiendo las señales de voltaje y corriente en el tiempo. Estas mediciones permitieron observar cómo las ecuaciones diferenciales se traducen en resultados experimentales y cómo la teoría del amortiguamiento se ajusta a las observaciones prácticas. Se utilizaron **osciloscopios** y **fuentes de señal** para generar las excitaciones y observar las respuestas del circuito.
+
+### **Ajuste de Componentes**
+
+Los estudiantes también realizaron ejercicios prácticos donde modificaron valores de los componentes $R$, $L$ y $C$ para observar cómo estos afectan el comportamiento del sistema. Este enfoque les permitió entender mejor cómo diseñar un circuito RLC que cumpla con requisitos específicos, como la eliminación de ruido o la creación de un filtro de paso bajo o paso alto.
+
+---
+
+## Conclusión
+
+La clase de laboratorio complementó lo aprendido en la **Clase 1** proporcionando una comprensión más profunda de los **Circuitos RLC**. A través de simulaciones y experimentos prácticos, los estudiantes pudieron visualizar cómo los sistemas de segundo orden reaccionan a diferentes condiciones, lo que facilita el diseño de sistemas de control más eficientes. Además, las aplicaciones de estos circuitos en filtros eléctricos, osciladores y comunicaciones se hicieron más claras, subrayando la importancia de comprender su comportamiento dinámico para aplicaciones tecnológicas.
+
+---
+
+## Referencias
+
+- Ogata, K. "Ingeniería de Control Moderna".
+- Dorf, R. "Sistemas de Control Automático".
