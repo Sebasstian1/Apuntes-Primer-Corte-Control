@@ -25,7 +25,7 @@ Donde:
 - $b$ es el coeficiente de amortiguamiento, que describe la resistencia al movimiento debido a fricción u otras fuerzas disipativas.
 - $k$ es la constante del resorte, que describe la elasticidad del resorte.
 - $x(t)$ es el desplazamiento de la masa en el tiempo.
-- $\dot{x}(t)$ es la velocidad (derivada de $x(t)$$), y $\ddot{x}(t)$ es la aceleración (segunda derivada de $x(t)$).
+- $\dot{x}(t)$ es la velocidad (derivada de $x(t)$), y $\ddot{x}(t)$ es la aceleración (segunda derivada de $x(t)$).
 - $F(t)$ es la fuerza externa aplicada al sistema.
 
 Esta ecuación describe cómo la masa se mueve en función de las fuerzas aplicadas, la resistencia al movimiento y la elasticidad del resorte.
@@ -103,31 +103,31 @@ Aquí, $X(s)$ es la transformada de Laplace de la salida, que es el desplazamien
 Las funciones de transferencia pueden clasificarse en tres tipos según la relación entre los grados del numerador y el denominador:
 
 - **Función Propia:** El grado del numerador es menor o igual que el grado del denominador. Esto significa que el sistema es "estable" y su salida no crece más rápido que la entrada.
-  
-  Ejemplo:
+
+  Ejemplo de **función propia**:
   $$
   H(s) = \frac{s + 1}{s^2 + 3s + 2}
   $$
 
-  Aquí, el grado del numerador (1) es menor que el grado del denominador (2), por lo que es una función propia.
+  En este caso, el grado del numerador (1) es menor que el grado del denominador (2), por lo que es una función **propia**.
 
 - **Función Impropia:** El grado del numerador es mayor que el grado del denominador. Esto indica que el sistema tiene un comportamiento "inestable", y la salida puede crecer más rápido que la entrada.
 
-  Ejemplo:
+  Ejemplo de **función impropia**:
   $$
   H(s) = \frac{s^2 + 2s + 1}{s + 3}
   $$
 
-  El grado del numerador (2) es mayor que el grado del denominador (1), por lo que es una función impropia.
+  El grado del numerador (2) es mayor que el grado del denominador (1), por lo que es una función **impropia**.
 
 - **Función Estrictamente Propia:** El grado del numerador es estrictamente menor que el grado del denominador. Este tipo de función es "más estable" y es común en sistemas físicos reales.
 
-  Ejemplo:
+  Ejemplo de **función estrictamente propia**:
   $$
   H(s) = \frac{1}{s^2 + 2s + 1}
   $$
 
-  Aquí, el grado del numerador (0) es estrictamente menor que el grado del denominador (2), por lo que es estrictamente propia.
+  Aquí, el grado del numerador (0) es estrictamente menor que el grado del denominador (2), por lo que es estrictamente **propia**.
 
 ---
 
