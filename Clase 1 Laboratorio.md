@@ -1,89 +1,107 @@
-# Sistemas de Control
+# Clase 2: Circuitos RLC en el Laboratorio
 
-Este documento contiene apuntes sobre **Sistemas de Control**, abordando la obtención de ecuaciones diferenciales a partir de modelos físicos en distintos dominios. Se incluyen ejemplos detallados y aplicaciones de cada sistema.
+En esta clase en el laboratorio, continuamos explorando las funciones de transferencia, pero nos enfocamos en un análisis más detallado de los **circuitos RLC** y su relación con los conceptos de funciones propias, bipropias e impropias. Los circuitos RLC son circuitos eléctricos que contienen resistores (R), inductores (L) y capacitores (C), y son esenciales en el estudio de sistemas dinámicos.
 
-## 1. Sistema Masa-Resorte-Amortiguador
-
-### Descripción del Sistema
-
-Un sistema masa-resorte-amortiguador es un modelo fundamental en el estudio de sistemas mecánicos traslacionales. Este sistema está compuesto por:
-
-- Una **masa** \( m \) que puede moverse en una dirección sobre una superficie sin fricción.
-- Un **resorte** con constante elástica \( k \) que genera una fuerza de restitución proporcional al desplazamiento.
-- Un **amortiguador** con coeficiente de amortiguamiento \( b \) que disipa la energía del sistema reduciendo la velocidad.
-- Una **fuerza externa** \( F(t) \) que actúa sobre la masa para excitar el sistema.
-
-### Ecuación Diferencial
-
-Aplicando la Segunda Ley de Newton, la sumatoria de fuerzas en la dirección del movimiento es:
-
-$$
-F(t) - b \dot{x} - kx = m x''
-$$
-
-Reordenando:
-
-$$
-m x'' + b \dot{x} + kx = F(t)
-$$
-
-Donde:
-
-- \( x \) es el desplazamiento de la masa.
-- \dot{x} es la velocidad.
-- \( x'' \) es la aceleración.
-
-### Solución de la Ecuación
-
-La solución general depende de las condiciones iniciales y del tipo de excitación aplicada al sistema. Se pueden analizar tres casos:
-
-1. **Respuesta libre sin amortiguamiento** (\( b = 0 \)): Movimiento oscilatorio con frecuencia natural \( \omega_n = \frac{k}{m} \).
-2. **Respuesta libre con amortiguamiento** (\( b > 0 \)): Movimiento amortiguado con diferentes regímenes (subamortiguado, críticamente amortiguado, sobreamortiguado).
-3. **Respuesta forzada** (\( F(t) \neq 0 \)): Respuesta en régimen permanente dependiendo de la excitación externa.
-
-### Aplicaciones Prácticas
-
-- Diseño de **suspensiones en automóviles**.
-- **Amortiguadores** en estructuras para mitigar efectos sísmicos.
-- Control de **vibraciones en maquinaria industrial**.
+### Circuitos RLC
+Un circuito RLC puede presentarse en varias configuraciones: **serie** o **paralelo**. Los circuitos RLC se usan comúnmente para modelar comportamientos resonantes, como oscilaciones y filtrado de señales. A continuación, veremos cómo los elementos del circuito afectan la función de transferencia.
 
 ---
 
-## 2. Circuitos RLC
+## Circuito RLC Serie
 
-### Descripción del Sistema
+En un circuito RLC en serie, la resistencia (R), el inductor (L) y el capacitor (C) están conectados de forma secuencial. La función de transferencia del circuito RLC en serie se puede obtener analizando la impedancia total del sistema.
 
-Un **circuito RLC** es un sistema eléctrico que puede modelarse mediante una ecuación diferencial análoga a la de sistemas mecánicos. Sus componentes son:
+### Impedancia en un circuito RLC Serie
 
-- **Resistor** de resistencia \( R \), que disipa energía en forma de calor.
-- **Inductor** con inductancia \( L \), que almacena energía en un campo magnético y genera una fuerza electromotriz en respuesta a cambios de corriente.
-- **Capacitor** con capacitancia \( C \), que almacena energía en un campo eléctrico y afecta la distribución de voltaje.
-- **Fuente de voltaje** \( V(t) \), que excita el circuito.
-
-### Ecuación Diferencial
-
-Aplicando la Ley de Kirchhoff de voltajes, la suma de caídas de voltaje en los componentes es igual a la tensión aplicada:
+La impedancia total de un circuito RLC serie se calcula como:
 
 $$
-V(t) = L \frac{d^2 i}{dt^2} + R \frac{di}{dt} + \frac{1}{C} i
-$$
-
-Reordenando:
-
-$$
-L \frac{d^2 i}{dt^2} + R \frac{di}{dt} + \frac{1}{C} i = \frac{dV}{dt}
+Z(s) = R + sL + \frac{1}{sC}
 $$
 
 Donde:
+- \(R\) es la resistencia.
+- \(L\) es la inductancia.
+- \(C\) es la capacitancia.
+- \(s\) es la variable compleja de Laplace.
 
-- \( i \) es la corriente en el circuito.
-- \frac{di}{dt} es la tasa de cambio de la corriente.
-- \frac{d^2 i}{dt^2} es la segunda derivada de la corriente con respecto al tiempo.
+### Función de Transferencia
+
+La función de transferencia \(H(s)\) de un circuito RLC serie es la relación entre la salida y la entrada del sistema en el dominio de Laplace:
+
+$$
+H(s) = \frac{V_{out}(s)}{V_{in}(s)} = \frac{1}{R + sL + \frac{1}{sC}}
+$$
+
+Donde:
+- \(V_{out}(s)\) es la salida en el dominio de Laplace.
+- \(V_{in}(s)\) es la entrada en el dominio de Laplace.
+
+Esta función de transferencia describe cómo las señales de entrada se afectan al pasar por el circuito.
 
 ---
 
-## Conclusión
+## Circuito RLC Paralelo
 
-Cada uno de estos sistemas puede ser representado mediante **ecuaciones diferenciales de segundo orden**. La solución de estas ecuaciones permite predecir el comportamiento dinámico del sistema y diseñar controladores adecuados para lograr respuestas deseadas. Además, las ecuaciones pueden transformarse al **dominio de Laplace**, lo que facilita su análisis y la obtención de funciones de transferencia.
+En un circuito RLC paralelo, la resistencia (R), el inductor (L) y el capacitor (C) están conectados en paralelo. La impedancia total de un circuito RLC paralelo se calcula de manera diferente.
 
-El estudio de estos sistemas es clave para el diseño de estrategias de control que optimicen la **estabilidad** y **desempeño** de diversos procesos físicos y tecnológicos.
+### Impedancia en un circuito RLC Paralelo
+
+La impedancia total de un circuito RLC paralelo es:
+
+$$
+Z(s) = \left( \frac{1}{R} + \frac{1}{sL} + sC \right)^{-1}
+$$
+
+### Función de Transferencia
+
+La función de transferencia en el caso de un circuito RLC paralelo se obtiene de la siguiente manera:
+
+$$
+H(s) = \frac{V_{out}(s)}{V_{in}(s)} = \frac{1}{\left( \frac{1}{R} + \frac{1}{sL} + sC \right)}
+$$
+
+---
+
+### Análisis de Estabilidad y Frecuencia de Resonancia
+
+En ambos tipos de circuitos, el comportamiento de la función de transferencia depende de la frecuencia de operación. Cuando la frecuencia se acerca a la **frecuencia de resonancia**, que se define como:
+
+$$
+f_0 = \frac{1}{2\pi \sqrt{LC}}
+$$
+
+El circuito muestra un comportamiento resonante, lo que significa que puede amplificar o filtrar señales dependiendo de su configuración.
+
+---
+
+## Resumen de Funciones de Transferencia en Circuitos RLC
+
+- **Circuito RLC Serie**: La función de transferencia está dada por:
+
+  $$
+  H(s) = \frac{1}{R + sL + \frac{1}{sC}}
+  $$
+
+- **Circuito RLC Paralelo**: La función de transferencia está dada por:
+
+  $$
+  H(s) = \frac{1}{\left( \frac{1}{R} + \frac{1}{sL} + sC \right)}
+  $$
+
+### Tipos de Funciones
+
+Las funciones de transferencia para los circuitos RLC pueden clasificarse de manera similar a otros sistemas:
+
+- **Función propia**: Cuando el grado del numerador es menor que el del denominador.
+- **Función bipropia**: Cuando el grado del numerador es igual al del denominador.
+- **Función impropia**: Cuando el grado del numerador es mayor que el del denominador.
+- **Función estrictamente propia**: Cuando el grado del numerador es estrictamente menor que el del denominador.
+
+Los circuitos RLC pueden tener funciones propias, bipropias o impropias dependiendo de la relación entre la inductancia, la capacitancia y la resistencia del circuito.
+
+---
+
+### **Conclusiones**
+En esta clase, hemos profundizado en los circuitos RLC, observando cómo la impedancia y las funciones de transferencia determinan el comportamiento de estos sistemas. Además, hemos identificado cómo clasificar estas funciones según su comportamiento, y cómo la resonancia influye en la respuesta de los circuitos. Los circuitos RLC son fundamentales para comprender sistemas oscilatorios, y su análisis en términos de funciones de transferencia es clave para el diseño de filtros y otros sistemas electrónicos.
+
