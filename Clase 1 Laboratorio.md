@@ -15,15 +15,15 @@ Este sistema es clave en el estudio de sistemas mecánicos traslacionales y se u
 **Ecuación Diferencial:**  
 Aplicando la Segunda Ley de Newton, la sumatoria de fuerzas en la dirección del movimiento es:
 
-\[
+$$
 F(t) - b \dot{x} - kx = mx''
-\]
+$$
 
 Reordenando:
 
-\[
+$$
 mx'' + b\dot{x} + kx = F(t)
-\]
+$$
 
 Donde:
 - \( x \) es el desplazamiento de la masa.
@@ -53,15 +53,15 @@ Los sistemas rotacionales son equivalentes a los sistemas traslacionales, pero e
 **Ecuación Diferencial:**  
 Aplicando la ecuación de movimiento rotacional basada en la Segunda Ley de Newton para sistemas angulares:
 
-\[
+$$
 T(t) - B\dot{\theta} - K\theta = J\theta''
-\]
+$$
 
 Reordenando:
 
-\[
+$$
 J\theta'' + B\dot{\theta} + K\theta = T(t)
-\]
+$$
 
 Donde:
 - \( \theta \) es el desplazamiento angular.
@@ -81,15 +81,15 @@ En esta clase, nos enfocamos más a fondo en los **circuitos RLC**. Un **circuit
 **Ecuación Diferencial:**  
 Aplicando la Ley de Kirchhoff de voltajes, la suma de caídas de voltaje en los componentes es igual a la tensión aplicada:
 
-\[
+$$
 V(t) = L \frac{d^2i}{dt^2} + R \frac{di}{dt} + \frac{1}{C}i
-\]
+$$
 
 Reordenando:
 
-\[
+$$
 L \frac{d^2i}{dt^2} + R \frac{di}{dt} + \frac{1}{C}i = \frac{dV}{dt}
-\]
+$$
 
 Donde:
 - \( i \) es la corriente en el circuito.
@@ -111,4 +111,3 @@ Donde:
 Aunque en esta clase repasamos los mismos conceptos generales que en la **Clase 1**, nos centramos más en el análisis y comportamiento de los **circuitos RLC**, entendiendo cómo las ecuaciones diferenciales pueden modelar sistemas eléctricos y aplicarlas en el diseño de filtros, osciladores y otros componentes clave de sistemas de control.
 
 La transformación de estas ecuaciones al dominio de **Laplace** y su posterior análisis es fundamental para comprender el comportamiento dinámico de los sistemas y diseñar controladores adecuados.
-
