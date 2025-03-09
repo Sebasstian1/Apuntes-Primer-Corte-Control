@@ -47,24 +47,6 @@ Además de las respuestas transitorias, se exploró cómo los circuitos RLC pued
 **Ejemplo: Filtro Pasa-Banda**
 Se diseñó un filtro pasa-banda utilizando un circuito RLC con $R = 10 \, \Omega$, $L = 0.5 \, H$ y $C = 0.01 \, F$. Este filtro dejó pasar señales con frecuencias cercanas a la frecuencia resonante, mientras que atenuó señales fuera de este rango.
 
-### **Simulaciones y Experimentos**
-
-En el laboratorio, los estudiantes realizaron experimentos prácticos con **circuitos RLC** reales, midiendo las señales de voltaje y corriente en el tiempo. Estas mediciones permitieron observar cómo las ecuaciones diferenciales se traducen en resultados experimentales y cómo la teoría del amortiguamiento se ajusta a las observaciones prácticas. Se utilizaron **osciloscopios** y **fuentes de señal** para generar las excitaciones y observar las respuestas del circuito.
-
-**Ejemplo:**
-Se conectó un circuito RLC en serie y se aplicó una señal de voltaje sinusoidal de 10 V a diferentes frecuencias. Los estudiantes midieron la corriente a través del circuito y observaron cómo la amplitud de la corriente cambiaba con la frecuencia de la señal, lo que confirmaba la resonancia a la frecuencia natural del circuito.
-
-### **Ajuste de Componentes**
-
-Los estudiantes también realizaron ejercicios prácticos donde modificaron valores de los componentes $R$, $L$ y $C$ para observar cómo estos afectan el comportamiento del sistema. Este enfoque les permitió entender mejor cómo diseñar un circuito RLC que cumpla con requisitos específicos, como la eliminación de ruido o la creación de un filtro de paso bajo o paso alto.
-
-**Ejemplo: Ajuste de la Frecuencia de Resonancia**
-Se modificaron los valores de $L$ y $C$ en un circuito RLC para cambiar la frecuencia de resonancia. Con un **inductor** de 0.5 H y un **condensador** de 0.01 F, la frecuencia de resonancia se calculó como:
-
-$$
-f_0 = \frac{1}{2\pi \sqrt{LC}}
-$$
-
 ---
 
 ## Conclusión
