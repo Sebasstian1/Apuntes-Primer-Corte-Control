@@ -30,7 +30,7 @@ $$
 Donde:
 
 - \( x \) es el desplazamiento de la masa.
-- \( \dot{x} \) es la velocidad.
+- \dot{x} es la velocidad.
 - \( x'' \) es la aceleración.
 
 ### Solución de la Ecuación
@@ -77,8 +77,8 @@ $$
 Donde:
 
 - \( i \) es la corriente en el circuito.
-- \( \frac{di}{dt} \) es la tasa de cambio de la corriente.
-- \( \frac{d^2 i}{dt^2} \) es la segunda derivada de la corriente con respecto al tiempo.
+- \frac{di}{dt} es la tasa de cambio de la corriente.
+- \frac{d^2 i}{dt^2} es la segunda derivada de la corriente con respecto al tiempo.
 
 ---
 
