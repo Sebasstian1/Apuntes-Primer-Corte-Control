@@ -99,7 +99,7 @@ Aquí:
 
 ---
 
-## 4. Funciones Propias, Impropias, Dipropias y Estrictamente Propias
+## 4. Funciones Propias, Impropias, Bipropias y Estrictamente Propias
 
 Las funciones de transferencia se pueden clasificar en cuatro tipos según la relación entre los grados del numerador y el denominador:
 
@@ -114,16 +114,16 @@ $$
 
 En este caso, el grado del numerador (1) es menor que el grado del denominador (2), por lo que es una función propia.
 
-### Función Dipropia
-El grado del numerador es **igual** al grado del denominador. Este tipo de función se denomina "dipropia" y suele indicar un comportamiento estable en sistemas físicos reales. Aunque el numerador y denominador tienen el mismo grado, se puede alcanzar una relación estable entre la salida y la entrada.
+### Función Bipropia
+El grado del numerador es **igual** al grado del denominador. Este tipo de función se denomina "bipropia". Una función bipropia se considera **propia** en algunos contextos porque puede tener una relación equilibrada entre el numerador y el denominador, lo que da lugar a un comportamiento relativamente estable. Sin embargo, es importante tener en cuenta que las funciones bipropias también pueden generar una respuesta con una frecuencia de resonancia o un comportamiento marginalmente estable.
 
-**Ejemplo de función dipropia:**
+**Ejemplo de función bipropia (y propia):**
 
 $$
 H(s) = \frac{s^2 + 2s + 1}{s^2 + 3s + 2}
 $$
 
-En este caso, el grado del numerador (2) es igual al grado del denominador (2), lo que clasifica la función como dipropia.
+En este caso, el grado del numerador (2) es igual al grado del denominador (2), lo que clasifica la función como bipropia. Aunque sea bipropia, en algunos contextos se considera una función **propia**.
 
 ### Función Impropia
 El grado del numerador es **mayor** que el grado del denominador. Las funciones impropias pueden ser inestables o no realizables físicamente, lo que puede llevar a oscilaciones no deseadas en el sistema.
@@ -152,9 +152,10 @@ En este caso, el grado del numerador (0) es estrictamente menor que el grado del
 ### **Resumen**
 
 - **Función propia**: El grado del numerador es menor que el del denominador.
-- **Función dipropia**: El grado del numerador es igual al del denominador.
+- **Función bipropia**: El grado del numerador es igual al del denominador. En algunos contextos, también se considera una función **propia**.
 - **Función impropia**: El grado del numerador es mayor que el del denominador.
 - **Función estrictamente propia**: El grado del numerador es estrictamente menor que el del denominador.
+
 
 ---
 
