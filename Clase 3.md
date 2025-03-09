@@ -99,23 +99,34 @@ Aquí:
 
 ---
 
-## 4. Funciones Propias, Impropias y Estrictamente Propias
+## 4. Funciones Propias, Impropias, Dipropias y Estrictamente Propias
 
-Las funciones de transferencia se pueden clasificar en tres tipos según la relación entre los grados del numerador y el denominador:
+Las funciones de transferencia se pueden clasificar en cuatro tipos según la relación entre los grados del numerador y el denominador:
 
 ### Función Propia
-El grado del numerador es igual al grado del denominador. Los sistemas con funciones propias son generalmente estables y no tienden a generar oscilaciones no deseadas.
+El grado del numerador es **menor** que el grado del denominador. Este tipo de función asegura una respuesta estable y es común en sistemas físicos donde se busca una respuesta controlable.
 
 **Ejemplo de función propia:**
 
 $$
-H(s) = \frac{s^2 + 1}{s^2 + 3s + 2}
+H(s) = \frac{s + 1}{s^2 + 2s + 1}
 $$
 
-Aquí, el grado del numerador (1) es igual que el grado del denominador (1), por lo que es una función propia.
+En este caso, el grado del numerador (1) es menor que el grado del denominador (2), por lo que es una función propia.
+
+### Función Dipropia
+El grado del numerador es **igual** al grado del denominador. Este tipo de función se denomina "dipropia" y suele indicar un comportamiento estable en sistemas físicos reales. Aunque el numerador y denominador tienen el mismo grado, se puede alcanzar una relación estable entre la salida y la entrada.
+
+**Ejemplo de función dipropia:**
+
+$$
+H(s) = \frac{s^2 + 2s + 1}{s^2 + 3s + 2}
+$$
+
+En este caso, el grado del numerador (2) es igual al grado del denominador (2), lo que clasifica la función como dipropia.
 
 ### Función Impropia
-El grado del numerador es mayor que el grado del denominador. Los sistemas con funciones impropias tienden a ser inestables o no realizables físicamente.
+El grado del numerador es **mayor** que el grado del denominador. Las funciones impropias pueden ser inestables o no realizables físicamente, lo que puede llevar a oscilaciones no deseadas en el sistema.
 
 **Ejemplo de función impropia:**
 
@@ -126,7 +137,7 @@ $$
 En este caso, el grado del numerador (2) es mayor que el grado del denominador (1), lo que clasifica la función como impropia.
 
 ### Función Estrictamente Propia
-El grado del numerador es estrictamente menor que el grado del denominador. Este tipo de función asegura que el sistema tiene una respuesta estable y controlable, siendo común en sistemas físicos reales.
+El grado del numerador es **estrictamente menor** que el grado del denominador. Este tipo de función asegura que el sistema tiene una respuesta estable y controlable, y es común en sistemas físicos reales.
 
 **Ejemplo de función estrictamente propia:**
 
@@ -136,15 +147,14 @@ $$
 
 En este caso, el grado del numerador (0) es estrictamente menor que el grado del denominador (2), lo que clasifica la función como estrictamente propia.
 
-
 ---
 
 ### **Resumen**
 
-- **Función propia**: El grado del numerador es menor o igual que el del denominador.
-- **Función estrictamente propia**: El grado del numerador es estrictamente menor que el del denominador.
+- **Función propia**: El grado del numerador es menor que el del denominador.
+- **Función dipropia**: El grado del numerador es igual al del denominador.
 - **Función impropia**: El grado del numerador es mayor que el del denominador.
-
+- **Función estrictamente propia**: El grado del numerador es estrictamente menor que el del denominador.
 
 ---
 
