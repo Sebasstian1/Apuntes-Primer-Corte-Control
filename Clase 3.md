@@ -123,6 +123,7 @@ $$
 H(s) = \frac{s^2 + 2s + 1}{s^2 + 3s + 2}
 $$
 
+
 En este caso, el grado del numerador (2) es igual al grado del denominador (2), lo que clasifica la función como bipropia. Aunque sea bipropia, en algunos contextos se considera una función **propia**.
 
 ### Función Impropia
