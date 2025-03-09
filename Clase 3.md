@@ -104,12 +104,12 @@ Aquí:
 Las funciones de transferencia se pueden clasificar en tres tipos según la relación entre los grados del numerador y el denominador:
 
 ### Función Propia
-El grado del numerador es menor o igual al grado del denominador. Los sistemas con funciones propias son generalmente estables y no tienden a generar oscilaciones no deseadas.
+El grado del numerador es igual al grado del denominador. Los sistemas con funciones propias son generalmente estables y no tienden a generar oscilaciones no deseadas.
 
 **Ejemplo de función propia:**
 
 $$
-H(s) = \frac{s + 1}{s^2 + 3s + 2}
+H(s) = \frac{s^2 + 1}{s^2 + 3s + 2}
 $$
 
 Aquí, el grado del numerador (1) es menor que el grado del denominador (2), por lo que es una función propia.
