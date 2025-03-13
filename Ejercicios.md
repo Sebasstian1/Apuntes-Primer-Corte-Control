@@ -28,8 +28,9 @@ $$ m_2 s^2 X_2(s) + (k_2 + k_3) X_2(s) - k_2 X_1(s) - b (s X_1(s) - s X_2(s)) = 
 
 De donde podemos despejar \( X_1(s) \) y \( X_2(s) \) en función de \( U(s) \).
 
-## Segundo Ejercicio
+---
 
+## Segundo Ejercicio
 
 ![image](https://github.com/user-attachments/assets/df54ad8b-cb30-4cf5-8c0e-32895fa7bf57)
 
