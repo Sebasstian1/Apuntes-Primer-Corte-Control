@@ -4,7 +4,6 @@
 
 ![{CB832BCA-4C5A-4E80-B71C-86A5F331C72C}](https://github.com/user-attachments/assets/6145e663-4439-4619-9101-897f9cd01aa4)
 
-
 ## Planteamiento del Problema
 
 El sistema consta de dos masas \( m_1 \) y \( m_2 \), conectadas mediante resortes de constantes \( k_1 \), \( k_2 \) y \( k_3 \), además de un amortiguador con coeficiente de amortiguamiento \( b \). La ecuación diferencial del sistema se obtiene aplicando la Segunda Ley de Newton a cada masa.
@@ -17,22 +16,19 @@ Para \( m_2 \):
 
 $$ m_2 \ddot{x}_2 = -k_3 x_2 + k_2 (x_1 - x_2) + b (\dot{x}_1 - \dot{x}_2) $$
 
-## Ecuaciones Diferenciales en Markdown
+## Solución del Sistema
 
-```markdown
-$$
-m_1 \ddot{x}_1 = -k_1 x_1 + k_2 (x_2 - x_1) - b (\dot{x}_1 - \dot{x}_2) + u
-$$
+Resolviendo el sistema en términos de sus ecuaciones diferenciales:
 
-$$
-m_2 \ddot{x}_2 = -k_3 x_2 + k_2 (x_1 - x_2) + b (\dot{x}_1 - \dot{x}_2)
-$$
-```
+Aplicando la transformada de Laplace:
+
+$$ m_1 s^2 X_1(s) + (k_1 + k_2) X_1(s) - k_2 X_2(s) + b (s X_1(s) - s X_2(s)) = U(s) $$
+
+$$ m_2 s^2 X_2(s) + (k_2 + k_3) X_2(s) - k_2 X_1(s) - b (s X_1(s) - s X_2(s)) = 0 $$
+
+De donde podemos despejar \( X_1(s) \) y \( X_2(s) \) en función de \( U(s) \).
 
 ## Conclusión
 
-Se han obtenido las ecuaciones diferenciales que describen el movimiento del sistema masa-resorte-amortiguador de dos grados de libertad y se han representado en formato Markdown con soporte para LaTeX, adecuado para visualizarse en GitHub.
-
-## Referencias
-
+Se han obtenido las ecuaciones diferenciales que describen el movimiento del sistema masa-resorte-amortiguador de dos grados de libertad y se ha planteado su solución en el dominio de Laplace.
 
