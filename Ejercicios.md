@@ -146,95 +146,66 @@ $$ J_2 s^2 \Theta_2(s) + D_2 s \Theta_2(s) + K (\Theta_2(s) - \Theta_1(s)) = 0 $
 ---
 
 
-## Sexto Ejercicio: Sistema de Tanques Interconectados  
+# Sexto Ejercicio  
 
-![{A53632EF-FB34-492B-98BC-C1F7A9C147CF}](https://github.com/user-attachments/assets/25bebbec-bdb8-43f0-966c-88e24d9774ac)
+## Planteamiento del problema  
 
-### Planteamiento del Problema  
+El sistema consta de dos tanques interconectados en serie. Se define:  
 
-El sistema consta de **dos tanques interconectados** en serie:  
+- \( q_i \) como el caudal de entrada al primer tanque.  
+- \( q_m \) como el caudal intermedio entre los tanques.  
+- \( q_o \) como el caudal de salida del segundo tanque.  
+- \( h_1 \) y \( h_2 \) como las alturas del líquido en los tanques.  
+- \( A_1 \) y \( A_2 \) como las áreas transversales de los tanques.  
 
-- \( q_i \) es el **caudal de entrada** al primer tanque, regulado por la válvula \( a_1 \).  
-- \( q_m \) es el **caudal intermedio** entre los tanques.  
-- \( q_o \) es el **caudal de salida** del segundo tanque, regulado por la válvula \( a_2 \).  
-- \( h_1 \) y \( h_2 \) son las **alturas del líquido** en los tanques.  
-- \( A_1 \) y \( A_2 \) son las **áreas transversales** de los tanques.  
+### Balance de masa  
 
-Aplicamos **balance de masas** en cada tanque.  
+Para el primer tanque:  
 
-Para el **primer tanque**:  
+$$ A_1 \frac{dh_1}{dt} = q_i - q_m $$
 
-\[
-A_1 \frac{dh_1}{dt} = q_i - q_m
-\]
+Para el segundo tanque:  
 
-Para el **segundo tanque**:  
+$$ A_2 \frac{dh_2}{dt} = q_m - q_o $$
 
-\[
-A_2 \frac{dh_2}{dt} = q_m - q_o
-\]
+Usando la ecuación de Torricelli, los caudales a través de las válvulas son:  
 
-**Flujo a través de las válvulas** (Ecuación de Torricelli):  
+$$ q_m = K_1 \sqrt{h_1} $$  
 
-\[
-q_m = K_1 \sqrt{h_1}
-\]
+$$ q_o = K_2 \sqrt{h_2} $$  
 
-\[
-q_o = K_2 \sqrt{h_2}
-\]
+Sustituyendo en las ecuaciones de balance de masa:  
 
-Sustituyendo en las ecuaciones de balance:  
+$$ A_1 \frac{dh_1}{dt} = q_i - K_1 \sqrt{h_1} $$  
 
-\[
-A_1 \frac{dh_1}{dt} = q_i - K_1 \sqrt{h_1}
-\]
+$$ A_2 \frac{dh_2}{dt} = K_1 \sqrt{h_1} - K_2 \sqrt{h_2} $$  
 
-\[
-A_2 \frac{dh_2}{dt} = K_1 \sqrt{h_1} - K_2 \sqrt{h_2}
-\]
+## Modelo en el dominio de Laplace  
 
----
+Aplicando la Transformada de Laplace:  
 
-### Solución en el Dominio de Laplace  
+$$ A_1 s H_1(s) = Q_i(s) - K_1 H_1(s)^{1/2} $$  
 
-Aplicamos la **Transformada de Laplace** con condiciones iniciales nulas:  
+$$ A_2 s H_2(s) = K_1 H_1(s)^{1/2} - K_2 H_2(s)^{1/2} $$  
 
-\[
-A_1 s H_1(s) = Q_i(s) - K_1 H_1(s)^{1/2}
-\]
+Linealizando alrededor de un punto de operación \( h_1^* \) y \( h_2^* \):  
 
-\[
-A_2 s H_2(s) = K_1 H_1(s)^{1/2} - K_2 H_2(s)^{1/2}
-\]
+$$ H_1(s)^{1/2} \approx \frac{1}{2 \sqrt{h_1^*}} H_1(s) $$  
 
-Para linealizar el sistema alrededor de un punto de operación \( h_1^* \) y \( h_2^* \), usamos una **expansión de Taylor**:  
+$$ H_2(s)^{1/2} \approx \frac{1}{2 \sqrt{h_2^*}} H_2(s) $$  
 
-\[
-H_1(s)^{1/2} \approx \frac{1}{2 \sqrt{h_1^*}} H_1(s)
-\]
+Sustituyendo en las ecuaciones de Laplace:  
 
-\[
-H_2(s)^{1/2} \approx \frac{1}{2 \sqrt{h_2^*}} H_2(s)
-\]
+$$ A_1 s H_1(s) = Q_i(s) - \frac{K_1}{2 \sqrt{h_1^*}} H_1(s) $$  
 
-Reemplazando en las ecuaciones de Laplace:
+$$ A_2 s H_2(s) = \frac{K_1}{2 \sqrt{h_1^*}} H_1(s) - \frac{K_2}{2 \sqrt{h_2^*}} H_2(s) $$  
 
-\[
-A_1 s H_1(s) = Q_i(s) - \frac{K_1}{2 \sqrt{h_1^*}} H_1(s)
-\]
+Resolviendo, se obtiene la función de transferencia del sistema.
 
-\[
-A_2 s H_2(s) = \frac{K_1}{2 \sqrt{h_1^*}} H_1(s) - \frac{K_2}{2 \sqrt{h_2^*}} H_2(s)
-\]
+## Conclusión  
 
-Despejando \( H_1(s) \) y \( H_2(s) \), podemos obtener la función de transferencia del sistema.
+Se modeló un sistema de tanques interconectados considerando balance de masa y ecuaciones de flujo. Luego, se aplicó la Transformada de Laplace y se linealizó para obtener una representación en el dominio de la frecuencia.
 
----
-
-### Conclusión  
-
-Se modeló el sistema de **tanques interconectados** aplicando **balance de masas** y la ecuación de **Torricelli**. Luego, se resolvió en el **dominio de Laplace** y se linealizó alrededor de un punto de operación para obtener una aproximación analítica.
 
 
 
