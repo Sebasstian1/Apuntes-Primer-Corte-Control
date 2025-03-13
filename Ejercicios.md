@@ -1,8 +1,6 @@
 # Sistema Masa-Resorte-Amortiguador
 
-## Enunciado del Problema
-
-_(Aquí se muestra el sistema de dos masas, resortes y amortiguador)_
+## Primer Ejercicio
 
 ![{CB832BCA-4C5A-4E80-B71C-86A5F331C72C}](https://github.com/user-attachments/assets/6145e663-4439-4619-9101-897f9cd01aa4)
 
