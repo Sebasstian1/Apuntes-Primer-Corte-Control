@@ -151,7 +151,7 @@ $$ J_2 s^2 \Theta_2(s) + D_2 s \Theta_2(s) + K (\Theta_2(s) - \Theta_1(s)) = 0 $
 ![{870EC201-AA3C-4E44-B452-A46AEA6D1CE5}](https://github.com/user-attachments/assets/7ef5698b-f97a-4ba4-99c3-55dc0bfe71bc)
 
 
-## Planteamiento del problema  
+### Planteamiento del problema  
 
 El sistema consta de dos tanques interconectados en serie. Se define:  
 
