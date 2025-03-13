@@ -151,11 +151,6 @@ Se resolvieron cinco ejercicios aplicando la Transformada de Laplace para modela
 
 ---
 
-# Problemas Resueltos de Dinámica de Sistemas
-
-Este documento contiene ejercicios resueltos de modelado y análisis de sistemas dinámicos utilizando la **Transformada de Laplace**.
-
----
 
 ## Sexto Ejercicio: Sistema de Tanques Interconectados  
 
