@@ -34,7 +34,6 @@ De donde podemos despejar \( X_1(s) \) y \( X_2(s) \) en función de \( U(s) \).
 
 ![image](https://github.com/user-attachments/assets/df54ad8b-cb30-4cf5-8c0e-32895fa7bf57)
 
-
 ## Planteamiento del Problema
 
 El sistema consta de dos masas \( m_1 \) y \( m_2 \), conectadas mediante resortes de constantes \( k_1 \) y \( k_2 \), además de un amortiguador con coeficiente de amortiguamiento \( b_1 \). Se aplica una fuerza externa \( u \) a la masa \( m_1 \).
@@ -57,7 +56,39 @@ $$ m_2 s^2 X_2(s) + k_2 X_2(s) - k_2 X_1(s) = 0 $$
 
 Resolviendo el sistema de ecuaciones, se obtiene la relación de \( X_1(s) \) y \( X_2(s) \) en función de \( U(s) \).
 
+---
+
+## Tercer Ejercicio: Circuito RLC en Serie
+
+![{A27A323C-26A3-4764-BD1A-AB76FD8CA779}](https://github.com/user-attachments/assets/0541e843-295d-422b-be27-8675ba032f75)
+
+
+## Planteamiento del Problema
+
+El circuito consta de una resistencia \( R \), un inductor \( L \) y un capacitor \( C \) en serie. La corriente \( i(t) \) fluye a través del circuito, mientras que la tensión en el capacitor es \( v_C(t) \). Aplicando la Ley de Kirchhoff de Voltajes:
+
+$$ v_i(t) = v_R(t) + v_L(t) + v_C(t) $$
+
+Reemplazando las expresiones de voltaje en cada componente:
+
+$$ v_i(t) = R i(t) + L \frac{d i(t)}{dt} + \frac{1}{C} \int i(t) dt $$
+
+Derivando en ambos lados para obtener una ecuación diferencial de segundo orden:
+
+$$ L \frac{d^2 i(t)}{dt^2} + R \frac{d i(t)}{dt} + \frac{1}{C} i(t) = \frac{d v_i(t)}{dt} $$
+
+## Solución del Sistema
+
+Aplicando la transformada de Laplace con condiciones iniciales nulas:
+
+$$ L s^2 I(s) + R s I(s) + \frac{1}{C} I(s) = s V_i(s) $$
+
+De donde podemos despejar \( I(s) \):
+
+$$ I(s) = \frac{s V_i(s)}{L s^2 + R s + \frac{1}{C}} $$
+
+Esta ecuación permite analizar la respuesta del circuito en el dominio de Laplace.
+
 ## Conclusión
 
-Se han obtenido las ecuaciones diferenciales que describen el movimiento del sistema masa-resorte-amortiguador de dos grados de libertad y se ha planteado su solución en el dominio de Laplace.
-
+Se han obtenido las ecuaciones diferenciales que describen el comportamiento del sistema masa-resorte-amortiguador y el circuito RLC en serie, planteando sus soluciones en el dominio de Laplace.
