@@ -56,7 +56,6 @@ $$ m_2 s^2 X_2(s) + k_2 X_2(s) - k_2 X_1(s) = 0 $$
 
 ![{9C29B82A-A38B-4093-919A-C64FC479EFF0}](https://github.com/user-attachments/assets/f72b018c-92d5-4558-bafd-3e8927d86e7b)
 
-
 ### Planteamiento del Problema
 
 El circuito consta de una resistencia \( R \), un inductor \( L \) y un capacitor \( C \) en serie. Aplicando la Ley de Kirchhoff:
@@ -82,7 +81,6 @@ $$ I(s) = \frac{s V_i(s)}{L s^2 + R s + \frac{1}{C}} $$
 ## Cuarto Ejercicio: Circuito RC con Dos Resistencias y Dos Capacitores
 
 ![{7D6A757C-58BD-4137-A6E2-4E8D5C0A13F9}](https://github.com/user-attachments/assets/b9f5bc0b-01bb-43d8-83e9-7dd132f2a7c0)
-
 
 ### Planteamiento del Problema
 
@@ -122,10 +120,31 @@ Resolviendo para \( V_o(s) \):
 
 $$ V_o(s) = \frac{V_i(s)}{1 + R_1 C_1 s + R_2 C_2 s} $$
 
-Esta ecuación describe la relación entre \( V_o(s) \) y \( V_i(s) \).
+---
+
+## Quinto Ejercicio: Sistema de Discos Acoplados con Resorte de Torsión
+
+![{58622C7E-6912-43A3-8B4E-506A0F7C6FE7}](https://github.com/user-attachments/assets/c445e42e-0bd6-4d79-9800-776a5e5986c8)
+
+
+### Planteamiento del Problema
+
+El sistema consta de dos discos de inercia \( J_1 \) y \( J_2 \), acoplados mediante un resorte de torsión con constante \( K \). Cada disco tiene un amortiguamiento viscoso \( D_1 \) y \( D_2 \), y un torque externo \( T(t) \) aplicado a \( J_1 \).
+
+Las ecuaciones de movimiento son:
+
+$$ J_1 \ddot{\theta}_1 + D_1 \dot{\theta}_1 + K (\theta_1 - \theta_2) = T(t) $$
+
+$$ J_2 \ddot{\theta}_2 + D_2 \dot{\theta}_2 + K (\theta_2 - \theta_1) = 0 $$
+
+### Solución en el Dominio de Laplace
+
+$$ J_1 s^2 \Theta_1(s) + D_1 s \Theta_1(s) + K (\Theta_1(s) - \Theta_2(s)) = T(s) $$
+
+$$ J_2 s^2 \Theta_2(s) + D_2 s \Theta_2(s) + K (\Theta_2(s) - \Theta_1(s)) = 0 $$
 
 ---
 
 ## Conclusión
 
-Se resolvieron cuatro ejercicios aplicando la Transformada de Laplace para encontrar soluciones en el dominio de la frecuencia. Estos incluyen sistemas mecánicos y eléctricos, mostrando la analogía entre ambos.
+Se resolvieron cinco ejercicios aplicando la Transformada de Laplace para modelar sistemas mecánicos y eléctricos.
