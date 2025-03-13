@@ -145,12 +145,6 @@ $$ J_2 s^2 \Theta_2(s) + D_2 s \Theta_2(s) + K (\Theta_2(s) - \Theta_1(s)) = 0 $
 
 ---
 
-## Conclusión
-
-Se resolvieron cinco ejercicios aplicando la Transformada de Laplace para modelar sistemas mecánicos y eléctricos.
-
----
-
 
 ## Sexto Ejercicio: Sistema de Tanques Interconectados  
 
