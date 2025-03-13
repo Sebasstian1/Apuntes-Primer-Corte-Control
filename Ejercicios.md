@@ -150,7 +150,6 @@ $$ J_2 s^2 \Theta_2(s) + D_2 s \Theta_2(s) + K (\Theta_2(s) - \Theta_1(s)) = 0 $
 
 ![{A53632EF-FB34-492B-98BC-C1F7A9C147CF}](https://github.com/user-attachments/assets/25bebbec-bdb8-43f0-966c-88e24d9774ac)
 
-
 ### Planteamiento del Problema  
 
 El sistema consta de **dos tanques interconectados** en serie:  
@@ -209,18 +208,34 @@ A_1 s H_1(s) = Q_i(s) - K_1 H_1(s)^{1/2}
 A_2 s H_2(s) = K_1 H_1(s)^{1/2} - K_2 H_2(s)^{1/2}
 \]
 
-Estas ecuaciones pueden resolverse numéricamente o **linealizarse** alrededor de un punto de operación para obtener una solución analítica.
+Para linealizar el sistema alrededor de un punto de operación \( h_1^* \) y \( h_2^* \), usamos una **expansión de Taylor**:  
+
+\[
+H_1(s)^{1/2} \approx \frac{1}{2 \sqrt{h_1^*}} H_1(s)
+\]
+
+\[
+H_2(s)^{1/2} \approx \frac{1}{2 \sqrt{h_2^*}} H_2(s)
+\]
+
+Reemplazando en las ecuaciones de Laplace:
+
+\[
+A_1 s H_1(s) = Q_i(s) - \frac{K_1}{2 \sqrt{h_1^*}} H_1(s)
+\]
+
+\[
+A_2 s H_2(s) = \frac{K_1}{2 \sqrt{h_1^*}} H_1(s) - \frac{K_2}{2 \sqrt{h_2^*}} H_2(s)
+\]
+
+Despejando \( H_1(s) \) y \( H_2(s) \), podemos obtener la función de transferencia del sistema.
 
 ---
 
 ### Conclusión  
 
-Se modeló el sistema de **tanques interconectados** aplicando **balance de masas** y la ecuación de **Torricelli**. Luego, se resolvió en el **dominio de Laplace** para su análisis dinámico.
+Se modeló el sistema de **tanques interconectados** aplicando **balance de masas** y la ecuación de **Torricelli**. Luego, se resolvió en el **dominio de Laplace** y se linealizó alrededor de un punto de operación para obtener una aproximación analítica.
 
----
 
-## Otros Ejercicios  
-
-Para más problemas resueltos, consulta los ejercicios anteriores en este mismo documento.
 
 
