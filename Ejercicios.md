@@ -205,11 +205,22 @@ $$ A_2 s H_2(s) = \frac{K_1}{2 \sqrt{h_1^*}} H_1(s) - \frac{K_2}{2 \sqrt{h_2^*}}
 
 Resolviendo, se obtiene la función de transferencia del sistema.
 
-## Conclusión  
 
-Se modeló un sistema de tanques interconectados considerando balance de masa y ecuaciones de flujo. Luego, se aplicó la Transformada de Laplace y se linealizó para obtener una representación en el dominio de la frecuencia.
+---
 
+## Conclusiones  
 
+El análisis y solución de estos seis ejercicios han permitido comprender la modelización matemática de diversos sistemas dinámicos en ingeniería. A partir de los resultados obtenidos, se pueden extraer las siguientes conclusiones:  
 
+1. **Sistemas mecánicos**: En los ejercicios del sistema masa-resorte-amortiguador y el sistema de discos acoplados, se observó que la Segunda Ley de Newton es la base para el modelado dinámico, y que la amortiguación juega un papel clave en la estabilidad del sistema.  
 
+2. **Circuitos eléctricos**: Los ejercicios de circuitos RLC y RC mostraron cómo las ecuaciones diferenciales pueden representar la dinámica de voltajes y corrientes, estableciendo una analogía con los sistemas mecánicos y facilitando el análisis mediante la transformada de Laplace.  
+
+3. **Sistemas hidráulicos**: El ejercicio de los tanques interconectados evidenció cómo la ecuación de continuidad y la ecuación de Torricelli permiten modelar el flujo de líquidos. Se destacó la importancia de la linealización para obtener funciones de transferencia utilizables en el análisis de control.  
+
+4. **Transformada de Laplace**: En todos los casos, la aplicación de la transformada de Laplace facilitó la solución de las ecuaciones diferenciales, permitiendo obtener funciones de transferencia que describen el comportamiento dinámico del sistema en el dominio de la frecuencia.  
+
+5. **Análisis de estabilidad y respuesta**: La representación en el dominio de Laplace no solo simplifica el cálculo, sino que también permite analizar la estabilidad y el tiempo de respuesta del sistema, factores críticos en el diseño y control de sistemas dinámicos.  
+
+En conclusión, el uso de herramientas matemáticas como la transformada de Laplace y la modelización con ecuaciones diferenciales es fundamental para el análisis de sistemas dinámicos en diferentes disciplinas de la ingeniería.  
 
