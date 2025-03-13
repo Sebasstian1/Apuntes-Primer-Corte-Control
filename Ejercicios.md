@@ -54,7 +54,8 @@ $$ m_2 s^2 X_2(s) + k_2 X_2(s) - k_2 X_1(s) = 0 $$
 
 ## Tercer Ejercicio: Circuito RLC en Serie
 
-![Circuito RLC](https://github.com/user-attachments/assets/rlc-circuit.png)
+![{9C29B82A-A38B-4093-919A-C64FC479EFF0}](https://github.com/user-attachments/assets/f72b018c-92d5-4558-bafd-3e8927d86e7b)
+
 
 ### Planteamiento del Problema
 
